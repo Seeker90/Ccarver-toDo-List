@@ -1,11 +1,15 @@
 
-const ToDoFooter = () => {
+const ToDoFooter = ({todos}) => {
+	
+	
 	return (
 		<>
-		<div className="text-center">
-         
+	
+         <footer className="p-2 text-sm text-gray-400">
+          {todos.length !== 1 ? `${todos.length} items left`: `${todos.length} item left`} 
+        </footer>
 
-		</div>
+		
 		</>
 	);
 };
