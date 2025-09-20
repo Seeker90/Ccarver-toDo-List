@@ -3,13 +3,19 @@ import "../../img/x-close-delete-svgrepo-com.svg"
 
 
 const ToDoTask = ({todos, setTodos}) => {
-	//create the deleteTask function here
+	const deleteTask = (todoID) => {
+		let updatedTodos = todos.filter(todo => todo.id !== todoID ); setTodos(updatedTodos)
+
+	};
 
 	let renderTasks = todos.map(todo => {
 		return (
 			<li className="list-item" key={todo.id}>
 				<label> {todo.title}</label>
-				{/*Create button here and link to deleteTask*/}
+				<button 
+				className="delete-task"
+				onClick={() => {deleteTask(todo.id)}}
+				>X</button>
 			</li>
 
 		);
