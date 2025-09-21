@@ -30,7 +30,7 @@ const ToDoInput = ({todos, setTodos}) => {
         <>
 		<input
             type="text"
-            className="new-todo"
+            className="new-todo w-full p-3 border-b outline-none"
             placeholder="What needs to be done?"
             value={newTask}
             onChange={event=> setNewTask(event.target.value)}
@@ -38,7 +38,6 @@ const ToDoInput = ({todos, setTodos}) => {
 		<button
             className="add-task"
             onClick={checkTextBox}
-            
             >Add task</button>
         
         </>

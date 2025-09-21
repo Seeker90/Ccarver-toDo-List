@@ -10,7 +10,7 @@ const ToDoTask = ({todos, setTodos}) => {
 
 	let renderTasks = todos.map(todo => {
 		return (
-			<li className="list-item" key={todo.id}>
+			<li className="list-item flex justify-content-between itmes-center p-3 border-p group" key={todo.id}>
 				<label> {todo.title}</label>
 				<button 
 				className="delete-task"
@@ -26,7 +26,7 @@ const ToDoTask = ({todos, setTodos}) => {
 	return (
 		<>
 		<div className="main">
-			<ul className="toDo-List">
+			<ul className="toDo-List p-3 text-gray-400">
 				{ToDoTask.length !== 0 ? renderTasks : "No task. Add a task."}
 			</ul>
 			
