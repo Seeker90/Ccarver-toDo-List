@@ -12,6 +12,8 @@ const ToDoInput = ({todos, setTodos}) => {
     };
         setTodos([...todos, newToDoObject])
         setCounter(counter +1)
+         setNewTask("")
+       
     };
 
     
@@ -24,7 +26,7 @@ const ToDoInput = ({todos, setTodos}) => {
                 addTask();
              }       
         }
-    
+   
 
     return(
         <>
