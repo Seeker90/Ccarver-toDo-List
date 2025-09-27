@@ -10,8 +10,8 @@ const ToDoTask = ({todos, setTodos}) => {
 
 	let renderTasks = todos.map(todo => {
 		return (
-			<li className="list-item flex justify-content-between itmes-center p-3 border-p group" key={todo.id}>
-				<label> {todo.title}</label>
+			<li className="list-item flex justify-content-between items-center p-3 border-p group list-unstyled" key={todo.id}>
+				<label> {todo.label}</label>
 				<button 
 				className="delete-task"
 				onClick={() => {deleteTask(todo.id)}}

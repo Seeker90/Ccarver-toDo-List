@@ -1,11 +1,50 @@
-/* 
+body{
+    background-color: rgb(230, 228, 228);
+}
+.main{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+}
+.empty{
+    width: 50%;
+    background-color: white;
+    height: 15px;
+    border: 2px;
+    border-color: lightgrey;
+    justify-content: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.clear{
+    width: 45%;
+    background-color: white;
+    height: 15px;
+    border: 2px;
+    border-color: lightgrey;
+    justify-content: center;
+    margin-left: 27.5%;
+    margin-right: 25%;
+}
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: lightpink;
+    opacity: 50%;
+    background-color: white;
+    font-size: 100px;
 
-*/
+}
+.input-master{
+    width: 80%;
+    background-color: whitesmoke;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}

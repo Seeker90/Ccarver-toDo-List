@@ -1,23 +1,24 @@
 // name array 'todos' from todotasks
 import { useState } from "react";
+import { postData } from "./Fetch";
+
+
 const ToDoInput = ({todos, setTodos}) => {
     const[newTask, setNewTask]=useState("");
-    const [counter, setCounter] = useState(0);
     const addTask = () => {
         console.log("creating new todo object to append", newTask)
    
     let newToDoObject = {
-        id: counter,
-        title: newTask,
+        label: newTask,
+        is_done: false
     };
-        setTodos([...todos, newToDoObject])
-        setCounter(counter +1)
-         setNewTask("")
+    postData(setTodos,newToDoObject);
+    setNewTask("")
        
     };
 
     
-    const checkTextBox = ({setTodos}) => {
+    const checkTextBox = () => {
         let textBox = document.querySelector(".new-todo");
         if (textBox.value === "") {
             alert("Please adda new task.");
