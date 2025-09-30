@@ -48,3 +48,8 @@ h1{
     margin-right: 10%;
 
 }
+.modal{
+    background-color: grey;
+    width: 50%;
+    justify-content: center;
+}

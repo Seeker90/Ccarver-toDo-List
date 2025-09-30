@@ -1,12 +1,9 @@
 import { useState } from "react";
 import "../../img/x-close-delete-svgrepo-com.svg"
+import { deleteTask } from "./Fetch";
 
 
 const ToDoTask = ({todos, setTodos}) => {
-	const deleteTask = (todoID) => {
-		let updatedTodos = todos.filter(todo => todo.id !== todoID ); setTodos(updatedTodos)
-
-	};
 
 	let renderTasks = todos.map(todo => {
 		return (
@@ -14,7 +11,7 @@ const ToDoTask = ({todos, setTodos}) => {
 				<label> {todo.label}</label>
 				<button 
 				className="delete-task"
-				onClick={() => {deleteTask(todo.id)}}
+				onClick={() => {deleteTask(todo.id, setTodos)}}
 				>X</button>
 			</li>
 

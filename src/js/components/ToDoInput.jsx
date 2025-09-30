@@ -27,8 +27,6 @@ const ToDoInput = ({todos, setTodos}) => {
                 addTask();
              }       
         }
-   
-
     return(
         <>
 		<input
