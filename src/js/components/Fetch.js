@@ -11,8 +11,8 @@ export const postNewUser = async(username) => {
 }
 
 //get single user data
-export const getData = async(setTodos) => {
-			const response = await fetch(`https://playground.4geeks.com/todo/users/ccarver`)
+export const getData = async(setTodos, username) => {
+			const response = await fetch(`https://playground.4geeks.com/todo/users/${username}`)
 			if (!response.ok) {
 				console.log('error: ', response.status, response.statusText);
         		return {error: {status: response.status, statusText: response.statusText}};
